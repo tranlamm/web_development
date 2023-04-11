@@ -47,10 +47,6 @@ a {
 
 .header_main .header_logo {
     padding-top: 10px;
-    -moz-box-shadow:    inset  0 -18px 8px -12px;
-    -webkit-box-shadow: inset  0 -18px 8px -12px;
-    box-shadow:        inset  0 -18px 8px -12px;
-    color: #ae3b3b;
 }
 
 .header_logo_container {
@@ -77,6 +73,7 @@ a {
 
 .header_nav .header_nav_main {
     background-color: #E7E9ED;
+    box-shadow: 0px -5px 10px #9C1010;
 }
 
 .header_nav_main .header_nav_list {
@@ -92,7 +89,7 @@ a {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 3px 5px;
+    padding: 2px 5px;
     transition: all ease-in-out 200ms;
     position: relative;
 }
@@ -121,9 +118,14 @@ a {
 }
 
 .header_nav_text {
+    color: #343434;
+    font-family: Tahoma, Geneva, sans-serif !important;
     font-size: 16px;
-    font-weight: 400;
     margin-left: 8px;
+}
+
+.header_nav_item:hover .header_nav_text {
+    color: white;
 }
 
 .header_nav_child {
@@ -146,8 +148,8 @@ a {
 .header_nav_child .child_list .child_item {
     padding: 8px 20px 6px 14px;
     font-size: 16px;
-    font-weight: 400;
-    color: black;
+    color: #343434;
+    font-family: Tahoma, Geneva, sans-serif !important;
 }
 
 .header_nav_child .child_list .child_item:hover {
@@ -185,7 +187,7 @@ a {
     text-decoration: none;
     color: #9f224e;
     background-color: #eceeed;
-    font-size: 14px;
+    font: 400 14px arial;
     padding: 4px 6px;
     display: inline-block;
     border-left: 3px solid #9f224e;
@@ -225,9 +227,11 @@ a {
 }
 
 .navigation_label {
-    color: #8c1515;
-    font-size: 14px;
+    font-size: 16px;
+    font-family: 'Segoe UI','Helvetica Neue','Droid Sans',Arial,Tahoma,Geneva,Sans-serif !important;
     font-weight: bold;
+    text-align: center;
+    color: #8c1515;
     text-transform: uppercase;
 }
 
@@ -298,6 +302,7 @@ a {
     border-bottom: 1px solid #ccc;
     line-height: 2;
     color: #337ab7;
+    font-family: 'Segoe UI','Helvetica Neue','Droid Sans',Arial,Tahoma,Geneva,Sans-serif !important;
     font-size: 13px;
 }
 
@@ -331,7 +336,13 @@ a {
     font-size: 14px;
     font-weight: bold;
     color: red;
-    font-family: "Times New Roman", Times, serif;
+    font-family: Times, serif;
+}
+
+.page_main_label_edit {
+    font-size: 24px;
+    color: #333;
+    margin-left: 18px;
 }
 
 .page_label_seperate {
@@ -379,10 +390,11 @@ a {
     max-width: 100%;
     width: 200px;
     line-height: 1.42857143;
-    box-shadow: 10px 10px 5px #a9dced;
-    -moz-box-shadow: 10px 10px 5px #a9dced;
-    -webkit-box-shadow: 10px 10px 5px #a9dced;
-    -khtml-box-shadow: 10px 10px 5px #a9dced;
+    border: 1px solid #ccc;
+    box-shadow: 10px 10px 5px #ccc;
+    -moz-box-shadow: 10px 10px 5px #ccc;
+    -webkit-box-shadow: 10px 10px 5px #ccc;
+    -khtml-box-shadow: 10px 10px 5px #ccc;
 }
 
 .avatar-wrapper img {
@@ -411,19 +423,28 @@ a {
 .personal_information_label {
     font-size: 16px;
     font-style: italic;
-    font-family: "Times New Roman", Times, serif;
+    font-family: Times, serif;
 }
 
 .personal_information_value {
     font-size: 16px;
     font-style: normal;
     font-weight: bold;
-    font-family: "Times New Roman", Times, serif;
+    font-family: Times, serif;
 }
 
-.page_note {
+.page_note_label {
     position: absolute;
     bottom: 18px;
+    font-family: 'Arimo', sans-serif !important;
+    color: #343434;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.page_note_value {
+    font-weight: 400;
+    font-size: 16px;
 }
 
 /* Footer */
@@ -458,4 +479,37 @@ a {
 
 .footer_right p, .footer_right hr {
     line-height: 1px;
+}
+
+.footer_text {
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif !important;
+    font-size: 14px;
+}
+ 
+/* ----------------------------------------------------------------------- */
+/* Edit Page */
+.page_info_submit {
+    margin-top: 32px;
+    text-align: center;
+}
+
+.avatar-edit {
+    margin-top: 24px;
+    display: flex;
+    flex-direction: column;
+}
+
+.edit-form-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.edit-form {
+    margin-bottom: 12px;
+}
+
+.edit-form-label {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 4px;
 }

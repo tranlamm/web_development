@@ -260,208 +260,99 @@
         </div>
         <div class="page_main">
             <div class="page_header">
-                <div class="page_label page_main_label">THÔNG TIN CÁ NHÂN</div>
+                <div class="page_label page_main_label">CHỈNH SỬA THÔNG TIN CÁ NHÂN</div>
                 <hr class="page_label_seperate">
             </div>
 
-            <div class="page_content">
-                <div class="page_info">
-                    <div class="page_info_header">
-                        <div class="page_header_label page_main_label">Thông tin sinh viên
-                            <a class="page_main_label_edit" href="./edit.html"><i class="fa-solid fa-pen-to-square"></i></a>
-                        </div>
-                        <hr class="page_header_seperate">
-                    </div>
-                    <div class="page_info_body">
-                        <div class="col-md-3">
+            <div class="page_edit">
+                <div class="row">
+                    <div class="col-4 px-5">
+                        <div class="avatar-edit-wrapper">
                             <div class="page_avatar">
                                 <div class="avatar-wrapper">
                                     <img src="./ctt_avatar.png" alt="Avatar">
                                 </div>
-                                <div class="avatar-mssv">MSSV:<span class="mssv">20204759</span></div>
+                            </div>
+                            <div class="avatar-edit">
+                                <div class="edit-form">
+                                    <div class="edit-form-label">Avatar:</div>
+                                    <input class="edit-form-input" type="file">
+                                </div>
+                                <div class="edit-form">
+                                    <div class="edit-form-label">MSSV:</div>
+                                    <input class="form-control form-control-sm" type="text" value="20204759" disabled>
+                                </div>
                             </div>
                         </div>
-                        <div class="col-md-4">
-                            <div class="page_personal_information">
-                                <span class="personal_information_label">Họ và tên&emsp;: 
-                                    <span class="personal_information_value">Trần Lâm</span>
-                                </span>
-                                <br>
-                                <span class="personal_information_label">Năm vào trường&emsp;: 
-                                    <span class="personal_information_value">2020</span>
-                                </span>
-                                <br>
-                                <span class="personal_information_label">Bậc đào tạo&emsp;: 
-                                    <span class="personal_information_value">Đại học đại trà</span>
-                                </span>
-                                <br>
-                                <span class="personal_information_label">Chương trình&emsp;: 
-                                    <span class="personal_information_value">Kỹ thuật Máy tính 2020</span>
-                                </span>
-                                <br>
-                                <span class="personal_information_label">Khoa/Viện quản lý&emsp;: 
-                                    <span class="personal_information_value">Trường Công nghệ Thông tin và Truyền thông</span>
-                                </span>
-                                <br>
-                                <span class="personal_information_label">Tình trạng học tập&emsp;: 
-                                    <span class="personal_information_value">Học</span>
-                                </span>
+                    </div>
+                    <div class="col-4 px-5">
+                        <div class="edit-form-wrapper">
+                            <div class="edit-form">
+                                <div class="edit-form-label">Họ và tên:</div>
+                                <input class="form-control form-control-sm" type="text" value="Trần Lâm">
+                            </div>
+                            <div class="edit-form">
+                                <div class="edit-form-label">Năm vào trường:</div>
+                                <input class="form-control form-control-sm" type="number" min="1900" max="2100" step="1" value="2020">
+                            </div>
+                            <div class="edit-form">
+                                <div class="edit-form-label">Bậc đào tạo:</div>
+                                <input class="form-control form-control-sm" type="text" value="Đại học đại trà">
+                            </div>
+                            <div class="edit-form">
+                                <div class="edit-form-label">Chương trình:</div>
+                                <input class="form-control form-control-sm" type="text" value="Kỹ thuật Máy tính 2020">
+                            </div>
+                            <div class="edit-form">
+                                <div class="edit-form-label">Khoa/Viện quản lý:</div>
+                                <input class="form-control form-control-sm" type="text" value="Trường Công nghệ Thông tin và Truyền thông">
+                            </div>
+                            <div class="edit-form">
+                                <div class="edit-form-label">Tình trạng học tập:</div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" id="inlineCheckbox1" type="radio" name="exampleRadios" checked>
+                                    <label class="form-check-label" for="inlineCheckbox1">Học</label>
+                                </div>
+                                <div class="form-check form-check-inline ml-5">
+                                    <input class="form-check-input" id="inlineCheckbox2" type="radio" name="exampleRadios">
+                                    <label class="form-check-label" for="inlineCheckbox2">Thôi học</label>
+                                  </div>
                             </div>
                         </div>
-                        <div class="col-md-4">
-                            <div class="page_personal_information">
-                                <span class="personal_information_label">Giới tính&emsp;: 
-                                    <span class="personal_information_value">Nam</span>
-                                </span>
-                                <br>
-                                <span class="personal_information_label">Lớp&emsp;: 
-                                    <span class="personal_information_value">Kỹ thuật máy tính 01-K65</span>
-                                </span>
-                                <br>
-                                <span class="personal_information_label">Khoá học&emsp;: 
-                                    <span class="personal_information_value">65</span>
-                                </span>
-                                <br>
-                                <span class="personal_information_label">Email&emsp;: 
-                                    <span class="personal_information_value">lam.t204759@sis.hust.edu.vn</span>
-                                </span>
+                    </div>
+                    <div class="col-4 px-5">
+                        <div class="edit-form-wrapper">
+                            <div class="edit-form">
+                                <div class="edit-form-label">Giới tính:</div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" id="inlineCheckbox3" type="radio" name="exampleRadios2" checked>
+                                    <label class="form-check-label" for="inlineCheckbox3">Nam</label>
+                                </div>
+                                <div class="form-check form-check-inline ml-5">
+                                    <input class="form-check-input" id="inlineCheckbox4" type="radio" name="exampleRadios2">
+                                    <label class="form-check-label" for="inlineCheckbox4">Nữ</label>
+                                  </div>
+                            </div>
+                            <div class="edit-form">
+                                <div class="edit-form-label">Lớp:</div>
+                                <input class="form-control form-control-sm" type="text" value="Kỹ thuật máy tính 01-K65">
+                            </div>
+                            <div class="edit-form">
+                                <div class="edit-form-label">Khóa học:</div>
+                                <input class="form-control form-control-sm" type="number" min="0" max="100" step="1" value="65">
+                            </div>
+                            <div class="edit-form">
+                                <div class="edit-form-label">Email:</div>
+                                <input class="form-control form-control-sm" type="email" value="lam.t204759@sis.hust.edu.vn">
                             </div>
                         </div>
                     </div>
                 </div>
+            </div>
 
-                <div class="page_info">
-                    <div class="page_info_header">
-                        <div class="page_header_label page_main_label">Thông tin học tập</div>
-                        <hr class="page_header_seperate">
-                    </div>
-                    <div class="page_info_body">
-                        <div class="col-md-6">
-                            <div class="page_personal_information">
-                                <span class="personal_information_label">Tổng kết học kỳ&emsp;: 
-                                    <span class="personal_information_value">20212</span>
-                                </span>
-                                <br>
-                                <span class="personal_information_label">Trung bình tích lũy&emsp;: 
-                                    <span class="personal_information_value">0.0</span>
-                                </span>
-                                <br>
-                                <span class="personal_information_label">Số TC nợ đăng ký&emsp;: 
-                                    <span class="personal_information_value">0</span>
-                                </span>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="page_personal_information">
-                                <span class="personal_information_label">Số TC tích lũy&emsp;: 
-                                    <span class="personal_information_value">0</span>
-                                </span>
-                                <br>
-                                <span class="personal_information_label">Trình độ sinh viên&emsp;: 
-                                    <span class="personal_information_value">0</span>
-                                </span>
-                                <br>
-                                <span class="personal_information_label">Mức cảnh báo&emsp;: 
-                                    <span class="personal_information_value">M0</span>
-                                </span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="page_info">
-                    <div class="page_info_header">
-                        <div class="page_header_label page_main_label">Thông tin cá nhân</div>
-                        <hr class="page_header_seperate">
-                    </div>
-                    <div class="page_info_body">
-                        <div class="col-md-6">
-                            <div class="page_personal_information">
-                                <span class="personal_information_label">Dân tộc&emsp;: 
-                                    <span class="personal_information_value">KINH</span>
-                                </span>
-                                <br>
-                                <span class="personal_information_label">Năm TN cấp 3&emsp;: 
-                                    <span class="personal_information_value">2020</span>
-                                </span>
-                                <br>
-                                <span class="personal_information_label">Địa chỉ&emsp;: 
-                                    <span class="personal_information_value">THÔNG TIN CÁ NHÂN</span>
-                                </span>
-                                <br>
-                                <span class="personal_information_label">Số CMTND&emsp;: 
-                                    <span class="personal_information_value">*******</span>
-                                </span>
-                                <br>
-                                <span class="personal_information_label">Nơi cấp&emsp;: 
-                                    <span class="personal_information_value">THÔNG TIN CÁ NHÂN</span>
-                                </span>
-                                <br>
-                                <span class="personal_information_label">Họ tên bố&emsp;: 
-                                    <span class="personal_information_value">THÔNG TIN CÁ NHÂN</span>
-                                </span>
-                                <br>
-                                <span class="personal_information_label">Năm sinh&emsp;: 
-                                    <span class="personal_information_value">19**</span>
-                                </span>
-                                <br>
-                                <span class="personal_information_label">Nghề nghiệp&emsp;: 
-                                    <span class="personal_information_value">THÔNG TIN CÁ NHÂN</span>
-                                </span>
-                                <br>
-                                <span class="personal_information_label">Điện thoại&emsp;: 
-                                    <span class="personal_information_value">091*****</span>
-                                </span>
-                                <br>
-                                <span class="personal_information_label">Email&emsp;: 
-                                    <span class="personal_information_value">***@***.***</span>
-                                </span>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="page_personal_information">
-                                <span class="personal_information_label">Tôn giáo&emsp;: 
-                                    <span class="personal_information_value">KHÔNG</span>
-                                </span>
-                                <br>
-                                <span class="personal_information_label">Trường THPT&emsp;: 
-                                    <span class="personal_information_value">THÔNG TIN CÁ NHÂN</span>
-                                </span>
-                                <br>
-                                <span class="personal_information_label">Hộ khẩu&emsp;: 
-                                    <span class="personal_information_value">THÔNG TIN CÁ NHÂN</span>
-                                </span>
-                                <br>
-                                <span class="personal_information_label">Số điện thoại&emsp;: 
-                                    <span class="personal_information_value">081*****</span>
-                                </span>
-                                <br>
-                                <span class="personal_information_label">Họ tên mẹ&emsp;: 
-                                    <span class="personal_information_value">THÔNG TIN CÁ NHÂN</span>
-                                </span>
-                                <br>
-                                <span class="personal_information_label">Năm sinh&emsp;: 
-                                    <span class="personal_information_value">19**</span>
-                                </span>
-                                <br>
-                                <span class="personal_information_label">Nghề nghiệp&emsp;: 
-                                    <span class="personal_information_value">THÔNG TIN CÁ NHÂN</span>
-                                </span>
-                                <br>
-                                <span class="personal_information_label">Điện thoại&emsp;: 
-                                    <span class="personal_information_value">091*****</span>
-                                </span>
-                                <br>
-                                <span class="personal_information_label">Email&emsp;: 
-                                    <span class="personal_information_value">***@***.***</span>
-                                </span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <span class="page_note_label">Ghi chú:<span class="page_note_value">Nếu sinh viên thấy thông tin của mình chưa chính xác, xin vui lòng liên hệ phòng Đào tạo để cập nhật lại</span>
-                </span>
+            <div class="page_info_submit">
+                <a href="./index.html" role="button" class="btn btn-success">OK</a>
+                <a href="./index.html" role="button" class="btn btn-secondary ml-2">Cancel</a>
             </div>
         </div>
     </div>
