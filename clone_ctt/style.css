@@ -364,6 +364,9 @@ a {
 
 .page_header_label {
     text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .page_header_seperate {
@@ -402,15 +405,21 @@ a {
 }
 
 .avatar-mssv {
-    width: 200px;
-    text-align: center;
-    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 200px;
     border-top: 1px solid rgba(0, 0, 0, 0.2);
     margin-top: 24px;
-    padding-top: 2px;
+    padding-top: 12px;
 }
 
-.mssv {
+.mssv_label {
+    font-weight: 600;
+    margin-right: 4px;
+}
+
+.mssv_value {
     font-weight: 400;
 }
 
@@ -428,7 +437,6 @@ a {
 
 .personal_information_value {
     font-size: 16px;
-    font-style: normal;
     font-weight: bold;
     font-family: Times, serif;
 }
@@ -451,7 +459,7 @@ a {
 #page_footer {
     width: 100%;
     float: left;
-    background: url(./ctt_footer.jpg) no-repeat top;
+    background: url(./image/ctt_footer.jpg) no-repeat top;
     height: 100px;
 }
 
@@ -488,28 +496,19 @@ a {
  
 /* ----------------------------------------------------------------------- */
 /* Edit Page */
-.page_info_submit {
-    margin-top: 32px;
-    text-align: center;
+.page_info .editable {
+    display: none;
 }
 
-.avatar-edit {
+.form_group_btn {
+    margin-right: 300px;
+}
+
+.upload_avatar {
     margin-top: 24px;
-    display: flex;
-    flex-direction: column;
+    max-width: 200px;
 }
 
-.edit-form-wrapper {
-    display: flex;
-    flex-direction: column;
-}
-
-.edit-form {
-    margin-bottom: 12px;
-}
-
-.edit-form-label {
-    font-size: 16px;
-    font-weight: 600;
-    margin-bottom: 4px;
+.editable_input {
+    margin-bottom: 8px;
 }

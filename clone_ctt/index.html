@@ -9,7 +9,7 @@
     <!-- Css File -->
     <link rel="stylesheet" href="style.css">
 
-    <!-- Cần bật internet để tải các link thư viện -->
+    <!-- Cần bật internet để link thư viện -->
     <!-- Font awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
@@ -21,8 +21,8 @@
         <div class="navigation">
             <div class="navigation_wrapper">
                 <div class="navigation_header">
-                    <img src="./ctt_avatar.png" alt="Avatar" class="navigation_avatar">
-                    <div class="navigation_label">TRẦN LÂM</div>
+                    <img src="./image/ctt_avatar_origin.png" alt="Avatar" class="navigation_avatar" id="nav_ava">
+                    <div class="navigation_label" id="nav_name">TRẦN LÂM</div>
                 </div>
                 <ul class="navigation_list">
                     <li class="navigation_item">
@@ -177,10 +177,19 @@
             </div>
 
             <div class="page_content">
-                <div class="page_info">
+                <form action="./index.html" class="page_info">
                     <div class="page_info_header">
-                        <div class="page_header_label page_main_label">Thông tin sinh viên
-                            <a class="page_main_label_edit" href="./edit.html"><i class="fa-solid fa-pen-to-square"></i></a>
+                        <div class="page_header_label page_main_label">
+                            <div>
+                                Thông tin sinh viên
+                                <!-- <a class="page_main_label_edit" href="./edit.html"><i class="fa-solid fa-pen-to-square"></i></a> -->
+                                <button class="page_main_label_edit" id="edit_btn"><i class="fa-solid fa-pen-to-square"></i><button>
+                            </div>
+                            <div class="editable form_group_btn">
+                                <button type="submit" class="btn btn-success" id="ok_btn">OK</button>
+                                <button class="btn btn-secondary ml-1" id="cancel_btn">Cancel</button>
+                                <button class="btn btn-primary ml-1" id="reset_btn">Reset</button>
+                            </div>
                         </div>
                         <hr class="page_header_seperate">
                     </div>
@@ -188,59 +197,152 @@
                         <div class="col-md-3">
                             <div class="page_avatar">
                                 <div class="avatar-wrapper">
-                                    <img src="./ctt_avatar.png" alt="Avatar">
+                                    <img src="./image/ctt_avatar_origin.png" id="avatarPath" alt="Avatar">
                                 </div>
-                                <div class="avatar-mssv">MSSV:<span class="mssv">20204759</span></div>
+
+                                <input class="upload_avatar editable" type="file" name="avatarPath" id="form_avatarPath">
+
+                                <div class="avatar-mssv">
+                                    <span class="mssv_label">MSSV:</span>
+                                    <span class="mssv_value non_editable" id="mssv">20204759</span>
+                                    <input class="editable form-control form-control-sm" type="number" value="20204759" min="20100000" max="20229999" id="form_mssv" name="mssv" required>
+                                </div>
                             </div>
                         </div>
                         <div class="col-md-4">
                             <div class="page_personal_information">
-                                <span class="personal_information_label">Họ và tên&emsp;: 
-                                    <span class="personal_information_value">Trần Lâm</span>
-                                </span>
-                                <br>
-                                <span class="personal_information_label">Năm vào trường&emsp;: 
-                                    <span class="personal_information_value">2020</span>
-                                </span>
-                                <br>
-                                <span class="personal_information_label">Bậc đào tạo&emsp;: 
-                                    <span class="personal_information_value">Đại học đại trà</span>
-                                </span>
-                                <br>
-                                <span class="personal_information_label">Chương trình&emsp;: 
-                                    <span class="personal_information_value">Kỹ thuật Máy tính 2020</span>
-                                </span>
-                                <br>
-                                <span class="personal_information_label">Khoa/Viện quản lý&emsp;: 
-                                    <span class="personal_information_value">Trường Công nghệ Thông tin và Truyền thông</span>
-                                </span>
-                                <br>
-                                <span class="personal_information_label">Tình trạng học tập&emsp;: 
-                                    <span class="personal_information_value">Học</span>
-                                </span>
+                                <div class="form_information_block">
+                                    <span class="personal_information_label">Họ và tên&emsp;:</span>
+                                    <span class="personal_information_value non_editable ml-1" id="hoVaTen">Trần Lâm</span>
+                                    <input class="form-control form-control-sm editable editable_input" type="text" value="Trần Lâm" id="form_hoVaTen" name="hoVaTen" required>
+                                </div>
+                                <div>
+                                    <span class="personal_information_label">Năm vào trường&emsp;:</span>
+                                    <span class="personal_information_value non_editable" id="namVaoTruong">2020</span>
+                                    <select class="form-control form-control-sm editable editable_input" name="namVaoTruong" id="form_namVaoTruong" required>
+                                        <option value="2015">2015</option>
+                                        <option value="2016">2016</option>
+                                        <option value="2017">2017</option>
+                                        <option value="2018">2018</option>
+                                        <option value="2019">2019</option>
+                                        <option selected value="2020">2020</option>
+                                        <option value="2021">2021</option>
+                                        <option value="2022">2022</option>
+                                        <option value="2023">2023</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <span class="personal_information_label">Bậc đào tạo&emsp;:</span>
+                                    <span class="personal_information_value non_editable" id="bacDaoTao">Đại học đại trà</span>
+                                    <select class="form-control form-control-sm editable editable_input" name="bacDaoTao" id="form_bacDaoTao" required>
+                                        <option selected value="Đại học đại trà">Đại học đại trà</option>
+                                        <option value="Kỹ sư chuyên sâu">Kỹ sư chuyên sâu</option>
+                                        <option value="Thạc sĩ">Thạc sĩ</option>
+                                        <option value="Tiến sĩ">Tiến sĩ</option>
+                                        <option value="Vừa học vừa làm">Vừa học vừa làm</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <span class="personal_information_label">Chương trình&emsp;:</span>
+                                    <span class="personal_information_value non_editable" id="chuongTrinh">Kỹ thuật Máy tính 2020</span>
+                                    <select class="form-control form-control-sm editable editable_input" name="chuongTrinh" id="form_chuongTrinh" required>
+                                        <option value="Khoa học Máy tính 2020">Khoa học Máy tính 2020</option>
+                                        <option selected value="Kỹ thuật Máy tính 2020">Kỹ thuật Máy tính 2020</option>
+                                        <option value="Elitech Khoa học Dữ liệu và Trí tuệ Nhân tạo 2020">Elitech Khoa học Dữ liệu và Trí tuệ Nhân tạo 2020</option>
+                                        <option value="Elitech Công nghệ thông tin toàn cầu 2020">Elitech Công nghệ thông tin toàn cầu 2020</option>
+                                        <option value="Elitech An toàn không gian số 2020">Elitech An toàn không gian số 2020</option>
+                                        <option value="Elitech Công nghệ thông tin Việt Nam – Nhật Bản 2020">Elitech Công nghệ thông tin Việt Nam – Nhật Bản 2020</option>
+                                        <option value="Elitech Công nghệ thông tin Việt Pháp 2020">Elitech Công nghệ thông tin Việt Pháp 2020</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <span class="personal_information_label">Khoa/Viện quản lý&emsp;:</span>
+                                    <span class="personal_information_value non_editable" id="khoaVienQuanLy">Trường Công nghệ Thông tin và Truyền thông</span>
+                                    <select class="form-control form-control-sm editable editable_input" name="khoaVienQuanLy" id="form_khoaVienQuanLy" required>
+                                        <option selected value="Trường Công nghệ Thông tin và Truyền thông">Trường Công nghệ Thông tin và Truyền thông</option>
+                                        <option value="Trường Điện - Điện tử">Trường Điện - Điện tử</option>
+                                        <option value="Trường Cơ khí">Trường Cơ khí</option>
+                                        <option value="Viện Công nghệ Sinh học và Công nghệ Thực phẩm">Viện Công nghệ Sinh học và Công nghệ Thực phẩm</option>
+                                        <option value="Viện Dệt may - Da giầy và Thời trang">Viện Dệt may - Da giầy và Thời trang</option>
+                                        <option value="Viện Khoa học và Công nghệ Môi trường">Viện Khoa học và Công nghệ Môi trường</option>
+                                        <option value="Viện Khoa học và Kỹ thuật Vật liệu">Viện Khoa học và Kỹ thuật Vật liệu</option>
+                                        <option value="Viện Kinh tế và Quản lý">Viện Kinh tế và Quản lý</option>
+                                        <option value="Viện Kỹ thuật Hóa học">Viện Kỹ thuật Hóa học</option>
+                                        <option value="Viện Ngoại ngữ">Viện Ngoại ngữ</option>
+                                        <option value="Viện Sư phạm Kỹ thuật">Viện Sư phạm Kỹ thuật</option>
+                                        <option value="Viện Toán ứng dụng và Tin học">Viện Toán ứng dụng và Tin học</option>
+                                        <option value="Viện Vật lý Kỹ thuật">Viện Vật lý Kỹ thuật</option>
+                                        <option value="Khoa Giáo dục Quốc phòng & An ninh">Khoa Giáo dục Quốc phòng & An ninh</option>
+                                        <option value="Khoa Giáo dục Thể chất">Khoa Giáo dục Thể chất</option>
+                                        <option value="Khoa Lý luận Chính trị">Khoa Lý luận Chính trị</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <span class="personal_information_label">Tình trạng học tập&emsp;:</span>
+                                    <span class="personal_information_value non_editable" id="tinhTrangHocTap">Học</span>
+                                    <div class="editable">
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" id="inlineCheckbox1" type="radio" name="tinhTrangHocTap" value="Học" checked>
+                                            <label class="form-check-label" for="inlineCheckbox1">Học</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" id="inlineCheckbox2" type="radio" name="tinhTrangHocTap" value="Tốt nghiệp">
+                                            <label class="form-check-label" for="inlineCheckbox2">Tốt nghiệp</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" id="inlineCheckbox2" type="radio" name="tinhTrangHocTap" value="Đuổi học">
+                                            <label class="form-check-label" for="inlineCheckbox2">Đuổi học</label>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                         <div class="col-md-4">
                             <div class="page_personal_information">
-                                <span class="personal_information_label">Giới tính&emsp;: 
-                                    <span class="personal_information_value">Nam</span>
-                                </span>
-                                <br>
-                                <span class="personal_information_label">Lớp&emsp;: 
-                                    <span class="personal_information_value">Kỹ thuật máy tính 01-K65</span>
-                                </span>
-                                <br>
-                                <span class="personal_information_label">Khoá học&emsp;: 
-                                    <span class="personal_information_value">65</span>
-                                </span>
-                                <br>
-                                <span class="personal_information_label">Email&emsp;: 
-                                    <span class="personal_information_value">lam.t204759@sis.hust.edu.vn</span>
-                                </span>
+                                <div>
+                                    <span class="personal_information_label">Giới tính&emsp;:</span>
+                                    <span class="personal_information_value non_editable" id="gioiTinh">Nam</span>
+                                    <div class="editable">
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" id="inlineCheckbox3" type="radio" name="gioiTinh" value="Nam" checked>
+                                            <label class="form-check-label" for="inlineCheckbox3">Nam</label>
+                                        </div>
+                                        <div class="form-check form-check-inline ml-5">
+                                            <input class="form-check-input" id="inlineCheckbox4" type="radio" name="gioiTinh" value="Nữ">
+                                            <label class="form-check-label" for="inlineCheckbox4">Nữ</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <span class="personal_information_label">Lớp&emsp;:</span>
+                                    <span class="personal_information_value non_editable" id="lop">Kỹ thuật máy tính 01-K65</span>
+                                    <input class="form-control form-control-sm editable editable_input" type="text" value="Kỹ thuật máy tính 01-K65" name="lop" id="form_lop" required>
+                                </div>
+                                <div>
+                                    <span class="personal_information_label">Khoá học&emsp;:</span>
+                                    <span class="personal_information_value non_editable" id="khoaHoc">65</span>
+                                    <select class="form-control form-control-sm editable editable_input" name="khoaHoc" id="form_khoaHoc" required>
+                                        <option value="58">58</option>
+                                        <option value="59">59</option>
+                                        <option value="60">60</option>
+                                        <option value="61">61</option>
+                                        <option value="62">62</option>
+                                        <option value="63">63</option>
+                                        <option value="64">64</option>
+                                        <option selected value="65">65</option>
+                                        <option value="66">66</option>
+                                        <option value="67">67</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <span class="personal_information_label">Email&emsp;:</span>
+                                    <span class="personal_information_value non_editable" id="email">lam.t204759@sis.hust.edu.vn</span>
+                                    <input class="form-control form-control-sm editable editable_input" type="email" value="lam.t204759@sis.hust.edu.vn" name="email" id="form_email" required>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
+                </form>
 
                 <div class="page_info">
                     <div class="page_info_header">
@@ -377,5 +479,7 @@
             </div>
         </div>
     </div>
+
+    <script src="main.js"></script>   
 </body>
 </html>
